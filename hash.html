@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#/a">A页面</a>
+    <a href="#/b">B页面</a>
+    <div id="app"></div>
+</body>
+
+</html>
+<script>
+    app = document.getElementById("app")
+    console.log(app);
+    function render() {
+        app.innerHTML = window.location.hash
+    }
+    window.addEventListener('hashchange', render)
+    render()
+</script>
